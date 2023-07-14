@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --app-width: 20rem;
+    --header-footer-height: 4rem;
+    --border-radius: 1rem;
+
+    --main-font-size: 1.2rem;
+    --temp-font-size: 4rem;
+
+    --header-footer-color: #FFF;
+    --background-txt-color: #1a0d09;
+    --wether-container-color: #f3ead9;
+    --error-color: #f3bcbc;
+    --error-txt-color: #721c24;
+}
+
+body {
+    font-family: "Rimouski",sans-serif;
+    background-color: var(--background-txt-color);
+    color: var(--background-txt-color);
+    font-size: var(--main-font-size);
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: var(--app-width);
+    background-color: var(--header-footer-color);
+    border-radius: var(--border-radius);
+    padding-bottom: var(--header-footer-height);
+}
+
+.app-title {
+    width: var(--app-width);
+    height: var(--header-footer-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification {
+    background-color: var(--error-color);
+    display: none;
+}
+
+.notification p {
+    color: var(--error-txt-color);
+    text-align: center;
+    padding: 0.8rem;
+}
+
+.weather-container {
+    width: var(--app-width);
+    height: calc(var(--app-width)*1.2);
+    background-color: var(--wether-container-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.weather-icon img {
+    display: block;
+    margin: 0 auto;
+}
+
+.temperature-value p {
+    font-size: var(--temp-font-size);
+    text-align: center;
+    cursor: pointer;
+}
+
+.temperature-value p:hover {
+    opacity: .8;
+}
+
+.temperature-value span {
+    font-size: calc(var(--temp-font-size)*0.7);
+}
+
+.temperature-description p {
+    text-align: center;
+}
+
+.humidity p {
+    text-align: center;
+}
+
+.location p {
+    text-align: center;
+font-size: calc(var(--main-font-size)*0.8);
+margin-bottom: var(--main-font-size);
+}
